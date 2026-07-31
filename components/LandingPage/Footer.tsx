@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { PawPrint } from "lucide-react";
 import petCareIcon from "@/public/LandingPage/petCareIcon.png"
 import Image from "next/image";
 
