@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import petCareIcon from "@/public/LandingPage/petCareIcon.png";
 import { Button } from "@/components/ui/button";
-import { SignInButton, SignUpButton } from "@clerk/nextjs";
+import { SignInButton, SignUpButton, useAuth } from "@clerk/nextjs";
 import { useState } from "react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
@@ -18,7 +18,7 @@ import Link from "next/link";
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-    const isSignedIn = false;
+    const {isSignedIn} =  useAuth();
     return (
         <nav className="h-16 px-6 py-4 bg-[#eceadf] flex items-center justify-between">
             <div className="flex items-center gap-4">
